@@ -206,7 +206,7 @@ public class DmdbTypeConverter implements TypeConverter<BasicTypeDefine> {
                 break;
             case DM_NVARCHAR:
             case DM_NVARCHAR2:
-                builder.sourceType(String.format("%s(%s)", DM_NVARCHAR, typeDefine.getLength()));
+                builder.sourceType(String.format("%s(%s)", DM_NVARCHAR2, typeDefine.getLength()));
                 builder.dataType(BasicType.STRING_TYPE);
                 builder.columnLength(TypeDefineUtils.charTo4ByteLength(typeDefine.getLength()));
                 break;
